@@ -19,5 +19,4 @@ public class Account {
     public String generateRow(){
         return row;
     }
-
 }
