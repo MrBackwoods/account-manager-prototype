@@ -12,7 +12,7 @@ public  class SaveAndLoadManager {
         SharedPreferences.Editor edit = preferences.edit();
         edit.putInt("Status_size", accounts.size());
 
-        for(int i=0;i<accounts.size();i++)
+        for(int i=0; i<accounts.size(); i++)
         {
             edit.remove("Status_" + i);
             edit.putString("Status_" + i, accounts.get(i));
@@ -29,7 +29,7 @@ public  class SaveAndLoadManager {
         accounts.clear();
         int size = mSharedPreference1.getInt("Status_size", 0);
 
-        for(int i=0;i<size;i++)
+        for(int i=0 ;i<size; i++)
         {
             accounts.add(mSharedPreference1.getString("Status_" + i, null));
         }
