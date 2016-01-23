@@ -50,7 +50,7 @@ public class MainActivity extends Activity implements View.OnClickListener  {
         ls.setAdapter(arrayAdapter);
     }
 
-    //Function that is called when 'save account info' is pressed
+    //Function that is called when 'save account data' is pressed
     public void onClick(View v) {
         EditText nameText = (EditText) findViewById(R.id.nameText);
         EditText accountText = (EditText) findViewById(R.id.accountText);
