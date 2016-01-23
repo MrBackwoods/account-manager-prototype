@@ -31,8 +31,8 @@ public class MainActivity extends Activity implements View.OnClickListener  {
         ListView listview = (ListView) findViewById(R.id.accountListView);
         listview.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
 
-            @Override
             // function that erases data row on long press
+            @Override
             public boolean onItemLongClick(AdapterView<?> av, View v, int pos, long id) {
                 String selectedItem = accounts.get(pos);
                 accounts.remove(selectedItem);
@@ -42,6 +42,7 @@ public class MainActivity extends Activity implements View.OnClickListener  {
             }
         });
     }
+    
     //Function that organizes account data and updates the ListView
     public void updateList() {
         Collections.sort(accounts);
