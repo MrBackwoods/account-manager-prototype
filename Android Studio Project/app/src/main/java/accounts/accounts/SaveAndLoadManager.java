@@ -11,7 +11,6 @@ public  class SaveAndLoadManager {
         SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mContext);
         SharedPreferences.Editor edit = preferences.edit();
         edit.putInt("Status_size", accounts.size());
-
         for(int i=0; i<accounts.size(); i++)
         {
             edit.remove("Status_" + i);
