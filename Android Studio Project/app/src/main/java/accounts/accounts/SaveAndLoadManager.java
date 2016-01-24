@@ -7,8 +7,8 @@ import java.util.*;
 public  class SaveAndLoadManager {
 
     // This function is used to save account data to SharedPreferences
-    public ArrayList<String> saveToSharedPreferences(Context mContext, ArrayList<String> accounts) {
-        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(mContext);
+    public ArrayList<String> saveToSharedPreferences(Context c, ArrayList<String> accounts) {
+        SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(c);
         SharedPreferences.Editor edit = preferences.edit();
         edit.putInt("Status_size", accounts.size());
         for(int i=0; i<accounts.size(); i++)
@@ -21,10 +21,10 @@ public  class SaveAndLoadManager {
     }
 
     // This function is used to load account data from SharedPreferences
-    public ArrayList<String> loadFromSharedPreferences(Context mContext)
+    public ArrayList<String> loadFromSharedPreferences(Context c)
     {
         ArrayList<String> accounts = new ArrayList<String>();
-        SharedPreferences mSharedPreference1 = PreferenceManager.getDefaultSharedPreferences(mContext);
+        SharedPreferences mSharedPreference1 = PreferenceManager.getDefaultSharedPreferences(c);
         accounts.clear();
         int size = mSharedPreference1.getInt("Status_size", 0);
 
